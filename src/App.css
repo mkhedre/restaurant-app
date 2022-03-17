@@ -1,38 +1,109 @@
 .App {
-  text-align: center;
+  background-image: url("../public/images/onepage_restaurant.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.menu,
+.contact {
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: 1s;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.Modal {
+  position: absolute;
+  background-color: #fff;
+  width: 70vw;
+  border-radius: 6px;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 2000ms ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ReactModal__Overlay--after-open {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ReactModal__Overlay--before-close {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+}
+.head h1 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  text-transform: capitalize;
+}
+.main {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+/* button {
+  
+} */
+.close {
+  color: #fff;
+  background-color: #999;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 15px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+ul li {
+  padding: 10px;
+  font-size: 25px;
+  color: #777;
+}
+ul li span {
+  margin-left: 10px;
+  color: #000;
+}
+/*  */
+.modal-content h1 {
+  text-transform: capitalize;
+  background-color: #000;
+  padding: 20px;
+  color: #fff;
+}
+
+.modal-content form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-content form input {
+  padding: 30px;
 }
